@@ -2,6 +2,7 @@
 # Python virtual environments
 .venv/
 venv/
+env/
 
 # Environment variables and credentials
 .env
@@ -12,10 +13,13 @@ venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
+build/
+dist/
 
 # Tests and coverage
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 
 # VS Code
@@ -33,3 +37,16 @@ data/processed/*
 
 # Logs
 *.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Intermediate pipeline outputs
+output/dados_integrados.parquet
+output/usgs_open_meteo_integrado.csv
