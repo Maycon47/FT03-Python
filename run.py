@@ -2,6 +2,8 @@
 from pathlib import Path
 import shutil
 
+import pandas as pd
+
 # Importa os módulos de extração.
 from src.extraction.pipeline import run_pipeline
 
@@ -163,6 +165,24 @@ def main() -> None:
         output_dir=OUTPUT_DIR,
     )
 
+    # Exporta os dados persistidos em Parquet para CSV.
+    print("\nExportando dados para CSV...")
+
+    df_csv = pd.read_parquet(parquet_dir)
+
+    # Remove as colunas utilizadas exclusivamente no particionamento.
+    df_csv = df_csv.drop(columns=["ano", "mes"], errors="ignore")
+
+    csv_path = OUTPUT_DIR / "dados_meteorologicos.csv"
+
+    df_csv.to_csv(
+        csv_path,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    print("Dados CSV:", csv_path)
+
     # Apresenta o resumo final da execução.
     print("\n" + "=" * 50)
     print("PIPELINE CONCLUÍDO COM SUCESSO")
@@ -176,6 +196,7 @@ def main() -> None:
     print("Colunas finais:", len(df_enriquecido.columns))
     print("Relatório JSON:", report_path)
     print("Dados Parquet:", parquet_dir)
+    print("Dados CSV:", csv_path)
 
 
 # Executa o pipeline quando o arquivo é chamado diretamente.
