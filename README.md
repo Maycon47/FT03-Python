@@ -24,7 +24,7 @@ O projeto utiliza dados de localizações de monitoramento disponibilizados pela
 
 O pipeline foi organizado em módulos independentes, coordenados por um único ponto de entrada.
 
-```text
+
 APIs Públicas
      |
      v
@@ -59,6 +59,7 @@ Relatório JSON      Persistência Parquet
                          v
                  Particionamento
                     Ano / Mês
+
 
 O arquivo `run.py` coordena a execução das etapas do pipeline.
 
