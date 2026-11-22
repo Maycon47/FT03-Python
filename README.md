@@ -59,7 +59,6 @@ Relatório JSON      Persistência Parquet
                          v
                  Particionamento
                     Ano / Mês
-```
 
 O arquivo `run.py` coordena a execução das etapas do pipeline.
 
