@@ -120,7 +120,7 @@ Essa implementação permite reutilizar o mesmo cliente HTTP nos módulos de ext
 
 ## 6. Estrutura de diretórios
 
-
+'''text
 FT03-Python/
 │
 ├── config/
@@ -163,6 +163,8 @@ FT03-Python/
 ├── README.md
 ├── requirements.txt
 ├── run.py
+
+'''
 
 Organização dos diretórios:
 
