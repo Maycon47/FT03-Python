@@ -164,7 +164,7 @@ FT03-Python/
 ├── requirements.txt
 ├── run.py
 
-**Organização dos diretórios:**
+Organização dos diretórios:
 
 - `notebooks/`: exploração, desenvolvimento e documentação dos experimentos.
 - `src/extraction/`: clientes HTTP e extração das APIs.
@@ -172,6 +172,7 @@ FT03-Python/
 - `src/quality/`: validação, auditoria e persistência dos dados.
 - `output/`: arquivos gerados pelo pipeline.
 - `config/`, `data/`, `docs/`, `reports/`, `sql/` e `tests/`: diretórios reservados para organização e evolução do projeto.
+
 
 Os diretórios reservados ainda não possuem funcionalidades implementadas.
 
